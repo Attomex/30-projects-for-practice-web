@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" type="module"></script>
+        <title>To-Do list</title>
+    </head>
+    <body>
+        <main>
+            <header class="header">
+                <h1 class="title">To-Do list</h1>
+                <img class="title-icon" src="assets/card-checklist.svg" alt="" />
+                <div class="save-container">
+                    <img class="save" src="assets/save.svg" alt="" />
+                </div>
+            </header>
+            <form action="" class="add-task">
+                <input type="text" name="task" placeholder="Add a new task" />
+                <button type="submit">Add</button>
+            </form>
+            <p class="error"></p>
+            <ul id="task-list"></ul>
+        </main>
+    </body>
+</html>

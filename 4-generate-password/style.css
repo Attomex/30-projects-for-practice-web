@@ -1,0 +1,96 @@
+:root {
+    --white: #fff;
+    --green: #038758;
+    --gray: #767778;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif", serif;
+}
+
+body {
+    background: #002039;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 500px;
+    margin: auto 100px;
+}
+
+.title-1,
+.title-2 {
+    user-select: none;
+    font-size: 3rem;
+}
+
+.title-1 {
+    color: var(--white);
+}
+
+.title-2 {
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px; 
+    height: 60px;
+    border-radius: 6px;
+    background: var(--white);
+}
+
+.copy,
+.eye {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: var(--green);
+}
+
+.copy {
+    margin-left: 15px;
+}
+
+#password {
+    user-select: none;
+    flex: 1;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    padding: 10px 20px;
+}
+
+
+.generate-password {
+    width: fit-content;
+    user-select: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: var(--green);
+    color: var(--white);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.generate-password svg {
+    width: 24px;
+    height: 24px
+}

@@ -1,0 +1,153 @@
+:root {
+    --padding: 20px;
+    --br: 8px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2b63ff;
+    background: linear-gradient(135deg, rgba(43, 99, 255, 1) 0%, rgba(163, 23, 182, 1) 100%);
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto 0;
+    background-color: #ebebeb;
+    border-radius: var(--br);
+    padding: var(--padding);
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.title-icon {
+    width: 24px;
+}
+
+.add-task {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-top: 10px;
+    background-color: #ccc;
+    border-radius: 40px;
+}
+
+.add-task:has(input:focus) {
+    box-shadow: inset 0 0 0 2px #ff5945;
+}
+
+.add-task input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.add-task button {
+    border: none;
+    outline: none;
+    padding: 15px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.save-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.save {
+    margin: auto 0;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.save-container:hover {
+    background: #a1a1a16c;
+} 
+
+.error {
+    display: none;
+    margin-top: 5px;
+    margin-left: 12px;
+    color: red;
+}
+
+#task-list {
+    list-style-type: none;
+}
+
+.task {
+    font-size: 1rem;
+    padding: 12px 8px 12px 40px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.task::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-image: url(assets/unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    top: 13px;
+    left: 8px;
+}
+
+.task.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+.delete {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 22px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.delete:hover {
+    background: #a1a1a16c;
+}
+
+.task.checked::before {
+    background-image: url(assets/checked.svg);
+}
