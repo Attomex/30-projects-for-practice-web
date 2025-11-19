@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/9618bc8523.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Toast Notification</title>
+    </head>
+    <body>
+        <div class="buttons">
+            <button data-msg="Successfully submitted" data-time="3000" data-status="success">Success</button>
+            <button data-msg="Please fix the error!" data-time="3000" data-status="error">Error</button>
+            <button data-msg="Invalid details!" data-time="3000" data-status="invalid">Invalid</button>
+        </div>
+        <div id="toastBox"></div>
+    </body>
+</html>
