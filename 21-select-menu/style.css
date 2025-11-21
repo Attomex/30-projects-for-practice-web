@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#f44336, #730228);
+}
+
+.selector {
+    width: 350px;
+}
+
+#selectField {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background: rgba(255 255 255 / 0.7);
+    border-radius: 6px;
+    cursor: pointer;
+
+    & img {
+        display: inline;
+        width: 16px;
+        user-select: none;
+        transform: rotate(0deg);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+#list {
+    visibility: hidden;
+    width: 100%;
+    background: rgba(255 255 255 / 0.7);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.options {
+    width: 100%;
+    padding: 15px 0 15px 70px;
+    list-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+
+    & img {
+        position: absolute;    
+        width: 25px;
+        top: 12px;
+        left: 25px;
+    }
+}
+
+.options:hover {
+    background: #fff;
+}
+
+.selector:has(.show) {
+    & #selectField img{
+        transform: rotate(180deg);
+    }
+
+    & #list{
+        visibility: visible;
+    }
+}
