@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --border-radius: 6px;
+    --gap: 10px;
+}
+
+body {
+    color: white;
+    font-size: 16px;
+    background-color: black;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-inline: 6px;
+}
+
+.search-params {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: var(--gap);
+    gap: var(--gap);
+    width: 360px;
+}
+
+select {
+    width: 50px;
+}
+
+#search-input {
+    border-radius: var(--border-radius);
+    text-align: end;
+}
+
+#limit-select {
+    border-radius: calc(var(--border-radius) / 2) var(--border-radius) var(--border-radius) calc(var(--border-radius) / 2);
+}
+
+label {
+    font-weight: bold;
+}
+
+#limit-select,
+#search-input {
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+#search-btn {
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #ccc;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.tenor-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    width: 360px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.header-item {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.gif {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.url-item {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    background: #eeaeca;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 50%, rgba(238,174,202,1) 100%);
+    margin-bottom: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.tag {
+    padding: 4px 6px;
+    background-color: #ccc;
+    color: black;
+    border-radius: var(--border-radius);
+    cursor: default;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

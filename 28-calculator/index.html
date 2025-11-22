@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta name="viewport" content="width=device-width"> -->
+        <title>Calculator</title>
+        <link rel="icon" type="image/png" href="calc.png" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" type="module"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="display">
+                    <input type="text" name="display" readonly />
+                    <p class="error"></p>
+                </div>
+                <div class="buttons-group">
+                    <div class="numbers">
+                        <input value="1" readonly class="btn number" />
+                        <input value="2" readonly class="btn number" />
+                        <input value="3" readonly class="btn number" />
+                        <input value="4" readonly class="btn number" />
+                        <input value="5" readonly class="btn number" />
+                        <input value="6" readonly class="btn number" />
+                        <input value="7" readonly class="btn number" />
+                        <input value="8" readonly class="btn number" />
+                        <input value="9" readonly class="btn number" />
+                        <input value="0" readonly class="btn number" />
+                        <input value="." readonly class="btn number" />
+                    </div>
+                    <div class="operations">
+                        <input value="+" readonly class="btn operation" />
+                        <input value="-" readonly class="btn operation" />
+                        <input value="*" readonly class="btn operation" />
+                        <input value="/" readonly class="btn operation" />
+                        <input value="C" readonly class="btn operation" />
+                        <input value="AC" readonly class="btn operation" />
+                        <input value="=" readonly class="btn equal operation" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

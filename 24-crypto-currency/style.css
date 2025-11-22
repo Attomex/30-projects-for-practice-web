@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("assets/background.png");
+    background-position: center;
+    background-size: cover;
+    padding: 0px 7%;
+    color: #fff;
+}
+
+.explore {
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0px;
+
+    & .logo {
+        width: 50px;
+        cursor: pointer;
+    }
+
+    & ul {
+        flex: 1;
+
+        & li {
+            display: inline-block;
+            margin: 10px 20px;
+            cursor: pointer;
+
+            & a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    & .btn {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px 30px;
+        border-radius: 30px;
+    }
+}
+
+.content {
+    margin-top: 12%;
+
+    & h1 {
+        font-size: 88px;
+        margin-bottom: 15px;
+
+        & span {
+            color: #ff960b;
+        }
+    }
+
+    & p {
+        line-height: 22px;
+        font-size: 14px;
+    }
+
+    & .btn {
+        display: inline-block;
+        margin-top: 30px;
+        background: #ff960b;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+    }
+}
+
+.coin-list {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 10%;
+    bottom: 50px;
+
+    & .coin {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin: 0px 15px;
+        padding: 20px 30px;
+        color: #ff960b;
+        border-radius: 8px;
+        border: 1px solid #fff;
+        transform: translate(0, 0);
+        box-shadow: none;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+        & img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        & h3 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.coin:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px #fff,
+                -5px -5px 5px rgba(0 0 0 / 0.3);
+}

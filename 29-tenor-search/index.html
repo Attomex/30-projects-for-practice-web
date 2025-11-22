@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/png" href="search.png" />
+
+        <title>Tenor - search</title>
+    </head>
+    <body>
+        <div class="container">
+            <form action="" class="search-params">
+                <label for="search-input">Search</label>
+                <input type="text" id="search-input" required />
+
+                <label for="limit-select">Limit</label>
+                <select id="limit-select">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+
+            <div class="results"></div>
+        </div>
+    </body>
+    <script src="script.js" type="module"></script>
+</html>
